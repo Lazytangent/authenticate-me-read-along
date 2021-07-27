@@ -99,3 +99,9 @@ exported, above the `return User` statement, but outside the invocation of the
 `sequelize.define` method. A good place to put them is right above the
 `User.associate` method and right below the end of the `sequelize.define`
 method.
+
+## Removing user auth middleware routes
+
+Once you are done with Phase 3, you can remove the three routes you created to
+test the auth middleware, which are just the `/api/set-token-cookie`,
+`/api/restore-user`, and `/api/require-auth` routes.
