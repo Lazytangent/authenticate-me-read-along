@@ -65,3 +65,13 @@ should then run `git status` to check for the removal of the `.env` file, add
 and commit as appropriate before pushing again to GitHub. Then, check the GitHub
 version of your repository to see if that has removed the `.env` file from
 there.
+
+## `req.csrfToken is not a function`
+
+You might run into this error towards the end of `Phase 0`. Because this
+application has a different setup than the group project from Module 4, you'll
+be applying CSRF a little differently. In your `backend/app.js` file, where you
+set up app-wide middleware, make sure that your `app.use(routes)` goes AFTER
+your `app.use(csurf(...))` block, since we want the CSRF middleware to be
+applied to our route handlers before our Express app has to handle any incoming
+requests.
