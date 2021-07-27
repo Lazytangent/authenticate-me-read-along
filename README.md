@@ -75,3 +75,9 @@ set up app-wide middleware, make sure that your `app.use(routes)` goes AFTER
 your `app.use(csurf(...))` block, since we want the CSRF middleware to be
 applied to our route handlers before our Express app has to handle any incoming
 requests.
+
+## `apiRouter`
+
+Make sure that you're importing the `apiRouter` into the
+`backend/routes/index.js` file and NOT into the `backend/routes/api/index.js`
+file.
