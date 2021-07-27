@@ -105,3 +105,25 @@ method.
 Once you are done with Phase 3, you can remove the three routes you created to
 test the auth middleware, which are just the `/api/set-token-cookie`,
 `/api/restore-user`, and `/api/require-auth` routes.
+
+## `backend/routes/api/index.js`
+
+When the instructions show you what the `backend/routes/api/index.js` file
+should look like after you connect the routes, don't forget that you should have
+the `/api/test` route in that file.
+
+```js
+// backend/routes/api/index.js
+const router = require('express').Router();
+const sessionRouter = require('./session');
+const usersRouter = require('./users');
+
+router.use('/session', sessionRouter);
+router.use('/users', usersRouter);
+
+router.post('/test', (req, res) => {
+  res.json({ requestBody: req.body });
+});
+
+module.exports = router;
+```
