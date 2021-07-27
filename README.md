@@ -127,3 +127,9 @@ router.post('/test', (req, res) => {
 
 module.exports = router;
 ```
+
+## Cleaning up the backend
+
+The only route to remove at this point is the `/hello/world` route in the
+`backend/routes/index.js` file. Make sure that you do NOT remove the `/api/test`
+route in your `backend/routes/api/index.js` file.
