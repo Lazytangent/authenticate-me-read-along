@@ -81,3 +81,10 @@ requests.
 Make sure that you're importing the `apiRouter` into the
 `backend/routes/index.js` file and NOT into the `backend/routes/api/index.js`
 file.
+
+## ForbiddenError: invalid csrf token
+
+If you're testing the `/api/test` route to test the api router, and getting the
+`invalid csrf token` error message, check to see if you have the `XSRF-TOKEN`
+header set in your `fetch` call, which you can get as a cookie when you go to
+the `/hello/world` route.
