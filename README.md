@@ -88,3 +88,14 @@ If you're testing the `/api/test` route to test the api router, and getting the
 `invalid csrf token` error message, check to see if you have the `XSRF-TOKEN`
 header set in your `fetch` call, which you can get as a cookie when you go to
 the `/hello/world` route.
+
+## User model methods
+
+Wondering where the instance and static methods should go in the User's model
+file? Since they're all adding methods to the User model, they need to be in the
+scope of the `User` variable created by the `sequelize.define()` method, so that
+means, these methods will need to be defined within the anonymous function being
+exported, above the `return User` statement, but outside the invocation of the
+`sequelize.define` method. A good place to put them is right above the
+`User.associate` method and right below the end of the `sequelize.define`
+method.
