@@ -1,7 +1,7 @@
-# Authenticate Me Read-Along
+# Authenticate Me Read-Along Part 1: Backend
 
-This reading is meant to accompany the Authenticate Me project that's set for
-the end of Week 15 in the Online Curriculum.
+This reading is meant to accompany Part 1 of the Authenticate Me project that's
+set for the end of Week 15 in the Online Curriculum.
 
 ### Links
 
