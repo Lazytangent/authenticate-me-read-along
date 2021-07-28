@@ -25,11 +25,11 @@ authenticate-me
 └── frontend
 ```
 
-You should initialize a git repository inside the `authenticate-me` directory,
-so that when you push to GitHub, GitHub will show the `backend` and `frontend`
-directories in the root of the project. When you first push to GitHub, if all
-you've made is the `backend` and `frontend` directories, then nothing will show
-up since git will not track empty folders.
+You should initialize a git repository inside the `authenticate-me` directory
+with `git init`, so that when you push to GitHub, GitHub will show the `backend`
+and `frontend` directories in the root of the project. When you first push to
+GitHub, if all you've made is the `backend` and `frontend` directories, then
+nothing will show up since git will not track empty folders.
 
 ### `.gitignore`
 
