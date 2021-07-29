@@ -98,8 +98,10 @@ file.
 
 If you're testing the `/api/test` route to test the api router, and getting the
 `invalid csrf token` error message, check to see if you have the `XSRF-TOKEN`
-header set in your `fetch` call, which you can get as a cookie when you go to
-the `/hello/world` route.
+header set in your `fetch` call. You can create the `XSRF-TOKEN` as a cookie by
+running `localhost:5000/hello/world` in your browser. Grab the value for the
+`XSRF-TOKEN` by opening the Dev Tools and choosing `Application` -> `Storage` ->
+`Cookies` -> `XSRF-TOKEN`.
 
 ## Phase 3: User Authentication
 
