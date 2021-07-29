@@ -27,7 +27,7 @@ a bit of time.
 
 When the instructions tell you to "[i]nitialize a `package.json` file at the
 very root of your project directory...", it means that you should run `npm init
--y` at the root of your project. That command will generate a `package.json`
+-y` at the root of your project. That command with generate a `package.json`
 will some of the necessary information for Heroku to build your application and
 then run it for you. Then, the instructions want you to paste over the `scripts`
 that it's given you over the `scripts` key that was made from running the `npm
