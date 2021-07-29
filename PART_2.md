@@ -45,18 +45,29 @@ section.
 
 ### `csrfFetch`
 
-Because of how the `csrfFetch` is designed, the `Content-Type` header is
-automatically set to `application/json` so you will almost never have to set
-that header yourself when using the `csrfFetch`.
+Because of how the `csrfFetch` is designed, (see the
+`frontend/src/store/csrf.js` file), the `Content-Type` header is automatically
+set to `application/json` so you will almost never have to set that header
+yourself when using the `csrfFetch` in your thunk.
 
-Also because of how it is set up, it throws the `response` object that's
+Also, the `csrfFetch` function throws the `response` object that is
 returned from the `fetch` call if the status code on the response is 400 or
-greater, which is essentially any time your backend can't resolve a request,
-either because the route doesn't exist (`404`), Sequelize encountered an error
-when doing a query (`500`), or you don't have an authorized user logged in
-(`401`). Because the response is thrown, you will have to `catch` it somewhere
-in your code to parse those errors, either with a `try { ... } catch (err) { ... }`
-block or with `.catch()` Promise methods. You can follow the example in the
-instructions on how to do it with a `.catch()` method in Phase 1 with the
-`LoginFormPage` and in Phase 2 with the `SignupFormPage` components, it their
-`handleSubmit` functions.
+greater.
+
+Possible status codes:
+
+1. `404` - Route doesn't exist
+2. `500` - Sequelize encountered an error when making a query
+3. `401` - No authorized user
+
+Because the response is thrown, you will have to `catch` it somewhere
+in your code to parse those errors.
+
+Two possibilities for catching include:
+
+* Using a `try { ... } catch (err) { ... }` block
+* Using `.catch()` Promise methods.
+
+You can follow the example in the instructions on how to do it with a `.catch()`
+method in Phase 1 with the `LoginFormPage` and in Phase 2 with the
+`SignupFormPage` components, it their `handleSubmit` functions.
