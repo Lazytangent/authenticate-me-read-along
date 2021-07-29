@@ -42,16 +42,8 @@ deployment to Heroku might encounter more issues than it would normally.
 
 ## Phase 3: Deploy to Heroku
 
-Since Heroku also supports a `main` branch now, you can push your `main` branch
-if that's what your default branch is in your repository. This means that you
-can use either
-
-```sh
-git push heroku main:master
-```
-
-to push your local `main` branch to a `master` branch on Heroku, but you'd have
-to use this exact command every time you needed to push to Heroku,
+Since Heroku now supports a `main` branch, you should push to Heroku using
+either
 
 ```sh
 git push heroku
@@ -62,10 +54,6 @@ or
 ```sh
 git push heroku main
 ```
-
-to just push your local `main` branch to a `main` branch on Heroku. Ideally, the
-`git push heroku` command should work, as long as you are on your `main` branch
-locally.
 
 ### Some common errors
 
